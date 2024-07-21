@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - The Noble Dram</title>
+  <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/login.css">
+  <style>
+    #login {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container {}
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    /* Form Styling */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: rgb(132, 84, 254);
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .forgot-password {
+      display: block;
+      margin-top: 10px;
+      text-align: right;
+      color: rgb(132, 84, 254);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section id="login">
+      <div class="login-container">
+        <img src="../static/images/noble-dram.jpeg" alt="The Noble Dram Logo" class="logo">
+        <h2>Welcome Back</h2>
+        <p>Log in to your account to continue your journey.</p>
+
+        <form id="login-form">
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </form>
+
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../static/js/login.js"></script>
+</body>
+
+</html>

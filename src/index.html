@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Design Assignment</title>
+  <title>The Noble Dram</title>
+  <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -19,83 +19,164 @@
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./index.html">Home</a>
-        <a href="#">Products</a>
+        <a href="./products">Products</a>
         <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Sign up</a>
-        <a href="#">Login</a>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./signup.html">Sign up</a>
+        <a href="./login.html">Login</a>
       </div>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      <a href="./index.html" class="brand">SipSavvy</a>
+      <span  onclick="openNav()">&#9776;</span>
+      <a href="./index.html" class="brand">The Noble Dram</a>
       <a>
-        <i class="bi bi-cart-check-fill cart"></i>
+        <div class="counter" id="count-el">0</div>
+        <i class="fas fa-shopping-cart cart"></i>
       </a>
     </header>
     <section class="hero-section">
       <h1>Discover the Finest Drinks, Curated by Experts</h1>
-      <p>SipSavvy: Your Gateway to Premium Beverages</p>
+      <p>Noble Dram: Your Gateway to Premium Beverages</p>
       <div class="btnDiv">
-        <a href="#">Explore beverage</a>
+        <a href="#shop">Explore beverage</a>
       </div>
     </section>
   </main>
+
   <section>
-    <section>
-      <h1 class="our-services">Our Services</h1>
-      <div class="services">
-        <div class="service-item">
-          <div class="item">
-            <i class="fas fa-wine-bottle"></i>
-            <strong>Product Catalog and Detailed Descriptions</strong>
-          </div>
-          <ul>
-            <li><i class="fas fa-list"></i> Wide Selection: Browse our extensive collection of wines, beers, spirits,
-              and non-alcoholic beverages.</li>
-            <li><i class="fas fa-info-circle"></i> Detailed Descriptions: Get in-depth information on each product,
-              including tasting notes, origin, alcohol content, and serving suggestions.</li>
-            <li><i class="fas fa-tags"></i> Competitive Pricing: Enjoy our products at competitive prices.</li>
-          </ul>
+    <h1 class="our-services">Our Services</h1>
+    <div class="services">
+      <div class="service-item">
+        <div class="item">
+          <i class="fas fa-wine-bottle"></i>
+          <strong>Product Catalog and Detailed Descriptions</strong>
         </div>
-        <div class="service-item">
-          <div class="item">
-            <i class="fas fa-heart"></i>
-            <strong>Personalized Recommendations</strong>
-          </div>
-          <ul>
-            <li><i class="fas fa-thumbs-up"></i> Recommendation Engine: Discover products tailored to your tastes based
-              on your browsing and purchase history.</li>
-            <li><i class="fas fa-cogs"></i> Personalized Collections: Explore curated collections for different
-              occasions, tastes, and budgets.</li>
-            <li><i class="fas fa-chart-line"></i> Trending Products: Stay updated with what's trending in the market.
-            </li>
-          </ul>
+        <ul>
+          <li><i class="fas fa-list"></i> Wide Selection: Browse our extensive collection of wines, beers, spirits,
+            and non-alcoholic beverages.</li>
+          <li><i class="fas fa-info-circle"></i> Detailed Descriptions: Get in-depth information on each product,
+            including tasting notes, origin, alcohol content, and serving suggestions.</li>
+          <li><i class="fas fa-tags"></i> Competitive Pricing: Enjoy our products at competitive prices.</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="item">
+          <i class="fas fa-heart"></i>
+          <strong>Personalized Recommendations</strong>
         </div>
-        <div class="service-item">
-          <div class="item">
-            <i class="fas fa-truck"></i>
-            <strong>Delivery Services</strong>
-          </div>
-          <ul>
-            <li><i class="fas fa-shipping-fast"></i> Fast Shipping: Choose from quick and reliable shipping options.
-            </li>
-            <li><i class="fas fa-box"></i> Free Delivery: Enjoy free delivery on orders over a certain amount.</li>
-            <li><i class="fas fa-gift"></i> Gift Wrapping: Add gift wrapping and personalized messages for special
-              gifts.</li>
-          </ul>
+        <ul>
+          <li><i class="fas fa-thumbs-up"></i> Recommendation Engine: Discover products tailored to your tastes based
+            on your browsing and purchase history.</li>
+          <li><i class="fas fa-cogs"></i> Personalized Collections: Explore curated collections for different
+            occasions, tastes, and budgets.</li>
+          <li><i class="fas fa-chart-line"></i> Trending Products: Stay updated with what's trending in the market.
+          </li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="item">
+          <i class="fas fa-truck"></i>
+          <strong>Delivery Services</strong>
+        </div>
+        <ul>
+          <li><i class="fas fa-shipping-fast"></i> Fast Shipping: Choose from quick and reliable shipping options.
+          </li>
+          <li><i class="fas fa-box"></i> Free Delivery: Enjoy free delivery on orders over a certain amount.</li>
+          <li><i class="fas fa-gift"></i> Gift Wrapping: Add gift wrapping and personalized messages for special
+            gifts.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="shop">
+    <h2>Shop Our Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../static/images/jameson.jpg" alt="Product Name">
+        <h3>Jameson Irish Whiskey</h3>
+        <p>Smooth and versatile, Jameson Irish Whiskey is triple-distilled for a balanced taste of honey, spice, and
+          vanilla. Enjoy it neat, on the rocks, or in cocktails.</p>
+        <p class="price">KSh 3,750 - 4,200</p>
+        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../static/images/smirnoff.webp" alt="Product Name">
+        <h3>Smirnoff Vodka</h3>
+        <p>Smirnoff Vodka is exceptionally smooth and clean, perfect for sipping or mixing. Enjoy its subtle sweetness
+          and crisp finish in your favorite drinks.</p>
+        <p class="price">KSh 3,000 - 3,500</p>
+        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../static/images/asian-rum.webp" alt="Product Name">
+        <h3>Tanduay Gold Asian Rum</h3>
+        <p>Smooth and mellow, Tanduay Gold is a Filipino rum with notes of caramel, vanilla, and tropical fruit. Aged in
+          ex-bourbon barrels, it's ideal for sipping or cocktails.</p>
+        <p class="price"> KSh 2,000 - 2,500</p>
+        <button class="add-to-cart" id="add-to-cart" onclick="addCart()">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../static/images/royal_stag.webp" alt="Product Name">
+        <h3>Royal Stag Whiskey</h3>
+        <p>A popular Indian whisky with a smooth and mellow blend of imported Scotch malts and Indian grain spirits.
+          Enjoy hints of fruit and spice in every sip.</p>
+        <p class="price">Ksh 1,111</p>
+        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+      </div>
+    </div>
+    <a href="./products.html" class="view-more-link">View More Products</a>
+  </section>
+  <section id="promotions">
+    <div class="promotion same-day-delivery">
+      <h3>Same Day Delivery</h3>
+      <p>Enjoy your favorite drinks tonight! Order by 2 PM for same-day delivery.</p>
+      <button>Order Now</button>
+    </div>
+    <div class="promotion wine-club">
+      <h3>Join Our Wine Club</h3>
+      <p>Get exclusive access to rare finds, curated selections, and special discounts.</p>
+      <button>Learn More</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
+          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
+          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter Signup</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" required>
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
+          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
+          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
         </div>
       </div>
-    </section>
-    <h1>Lorem</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et hic exercitationem ullam maiores quae ipsa odit vel!
-      Mollitia quam fuga repudiandae ad beatae in sapiente non enim culpa accusamus inventore, vel ipsa harum placeat.
-      Officia, ratione, nostrum blanditiis porro illum esse officiis temporibus nam fugit necessitatibus nobis, numquam
-      sequi! Consequuntur, harum ducimus? Asperiores doloremque ipsa quae minima possimus nisi, a temporibus, voluptas,
-      vero fugiat sapiente iusto exercitationem consequuntur omnis molestiae suscipit maiores maxime. Magnam modi vel
-      reprehenderit rerum illum voluptatum, error, exercitationem perferendis facilis similique iure autem nemo
-      molestias enim quidem ratione dolorum culpa a necessitatibus est sapiente maiores? Enim.</p>
-  </section>
-  <footer></footer>
-
+    </div>
+    <div class="copy">
+      <p>&copy; 2024, The Noble Dram&trade;. All Rights Reserved.</p>
+    </div>
+  </footer>
   <script src="../static/js/script.js"></script>
 </body>
 

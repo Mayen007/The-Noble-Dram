@@ -9,3 +9,9 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
 }
+
+function addCart() {
+  let countEl = document.getElementById("count-el");
+  countEl++;
+  alert("Added to cart.");
+}
