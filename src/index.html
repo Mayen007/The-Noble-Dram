@@ -12,20 +12,20 @@
 
 <body>
   <div class="marquee">
-    <span>Get 10% discount on your first purchase with promo-code #getsavvy01</span>
+    <span>Get 10% discount on your first purchase with promo-code <a href="./products.html">#getsavvy01</a></span>
   </div>
   <main>
     <header>
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./index.html">Home</a>
-        <a href="./products">Products</a>
-        <a href="#">About Us</a>
+        <a href="./products.html">Products</a>
+        <a href="./about.html">About Us</a>
         <a href="./contact.html">Contact Us</a>
         <a href="./signup.html">Sign up</a>
         <a href="./login.html">Login</a>
       </div>
-      <span  onclick="openNav()">&#9776;</span>
+      <span onclick="openNav()">&#9776;</span>
       <a href="./index.html" class="brand">The Noble Dram</a>
       <a>
         <div class="counter" id="count-el">0</div>
@@ -41,7 +41,7 @@
     </section>
   </main>
 
-  <section>
+  <section id="services">
     <h1 class="our-services">Our Services</h1>
     <div class="services">
       <div class="service-item">
@@ -94,7 +94,7 @@
         <h3>Jameson Irish Whiskey</h3>
         <p>Smooth and versatile, Jameson Irish Whiskey is triple-distilled for a balanced taste of honey, spice, and
           vanilla. Enjoy it neat, on the rocks, or in cocktails.</p>
-        <p class="price">KSh 3,750 - 4,200</p>
+        <p class="price">KSh3,750 - 4,200</p>
         <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
       </div>
       <div class="product-card">
@@ -102,7 +102,7 @@
         <h3>Smirnoff Vodka</h3>
         <p>Smirnoff Vodka is exceptionally smooth and clean, perfect for sipping or mixing. Enjoy its subtle sweetness
           and crisp finish in your favorite drinks.</p>
-        <p class="price">KSh 3,000 - 3,500</p>
+        <p class="price">KSh3,000 - 3,500</p>
         <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
       </div>
       <div class="product-card">
@@ -110,7 +110,7 @@
         <h3>Tanduay Gold Asian Rum</h3>
         <p>Smooth and mellow, Tanduay Gold is a Filipino rum with notes of caramel, vanilla, and tropical fruit. Aged in
           ex-bourbon barrels, it's ideal for sipping or cocktails.</p>
-        <p class="price"> KSh 2,000 - 2,500</p>
+        <p class="price"> KSh2,000 - 2,500</p>
         <button class="add-to-cart" id="add-to-cart" onclick="addCart()">Add to Cart</button>
       </div>
       <div class="product-card">
@@ -118,7 +118,7 @@
         <h3>Royal Stag Whiskey</h3>
         <p>A popular Indian whisky with a smooth and mellow blend of imported Scotch malts and Indian grain spirits.
           Enjoy hints of fruit and spice in every sip.</p>
-        <p class="price">Ksh 1,111</p>
+        <p class="price">Ksh1,119.99</p>
         <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
       </div>
     </div>
@@ -128,12 +128,12 @@
     <div class="promotion same-day-delivery">
       <h3>Same Day Delivery</h3>
       <p>Enjoy your favorite drinks tonight! Order by 2 PM for same-day delivery.</p>
-      <button>Order Now</button>
+      <a href="./products.html">Order Now</a>
     </div>
     <div class="promotion wine-club">
       <h3>Join Our Wine Club</h3>
       <p>Get exclusive access to rare finds, curated selections, and special discounts.</p>
-      <button>Learn More</button>
+      <a href="#learn_more">Learn More</a>
     </div>
   </section>
   <footer class="footer">
@@ -143,8 +143,8 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./about.html">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
       </div>
