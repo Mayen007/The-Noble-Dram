@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - The Noble Dram</title>
+  <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/signup.css">
+  <style>
+    #signup {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      background-color: rgb(132, 84, 254);
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .social-signup {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .login-link {
+      margin-top: 20px;
+    }
+
+    .login-link a {
+      color: rgb(132, 84, 254);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section id="signup">
+      <div class="signup-container">
+        <img src="../static/images/noble-dram.jpeg" alt="The Noble Dram Logo" class="logo">
+        <h2>Join the Club</h2>
+        <p>Sign up for a world of premium spirits and exclusive offers.</p>
+
+        <form id="signup-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="../static/js/signup.js"></script>
+</body>
+
+</html>

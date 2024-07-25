@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
+  <title>Products - The Noble Dram</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    #steps {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="marquee">
+    <span>Get 10% discount on your first purchase with promo-code <a href="./products.html">#getsavvy01</a></span>
+  </div>
+  <header>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="./index.html">Home</a>
+      <a href="./products">Products</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./signup.html">Sign up</a>
+      <a href="./login.html">Login</a>
+    </div>
+    <span onclick="openNav()">&#9776;</span>
+    <a href="./index.html" class="brand">The Noble Dram</a>
+    <a>
+      <div class="counter" id="count-el">0</div>
+      <i class="fas fa-shopping-cart cart"></i>
+    </a>
+  </header>
+  <section id="shop">
+    <h2>Our Products</h2>
+    <div class="filter-buttons">
+      <button class="filter-button">All</button>
+      <button class="filter-button">Wine</button>
+      <button class="filter-button">Beer</button>
+      <button class="filter-button">Spirits</button>
+      <button class="filter-button">Non-Alcoholic</button>
+    </div>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="../static/images/4th-Street.webp" alt="Wine">
+        <h3>Red Wine</h3>
+        <p class="price">Ksh1,950.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
+        <h3>Craft Beer</h3>
+        <p class="price">Ksh330.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="../static/images/Black-_-White.png" alt="Whiskey">
+        <h3>Black & White Whiskey</h3>
+        <p class="price">Ksh1,350.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="../static/images/jagermeister.png" alt="Juice">
+        <h3>Jagermeister</h3>
+        <p class="price">Ksh3,999.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <section id="steps">
+    <h2>How to Order</h2>
+    <ol>
+      <li>Browse our product catalog.</li>
+      <li>Add your favorite items to the cart.</li>
+      <li>Proceed to checkout.</li>
+      <li>Enter your shipping and payment details.</li>
+      <li>Confirm your order.</li>
+    </ol>
+  </section>
+
+  <script src="../static/js/script.js"></script>
+</body>
+
+</html>
