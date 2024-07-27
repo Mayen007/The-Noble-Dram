@@ -14,8 +14,7 @@
   <div class="marquee">
     <span>Get 10% discount on your first purchase with promo-code <a href="./products.html">#getsavvy01</a></span>
   </div>
-  <main>
-    <header>
+   <header>
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./index.html">Home</a>
@@ -25,13 +24,15 @@
         <a href="./signup.html">Sign up</a>
         <a href="./login.html">Login</a>
       </div>
-      <span onclick="openNav()">&#9776;</span>
+      <span onclick="openNav()" class="menu">&#9776;</span>
       <a href="./index.html" class="brand">The Noble Dram</a>
-      <a>
+      <a href="#">
         <div class="counter" id="count-el">0</div>
         <i class="fas fa-shopping-cart cart"></i>
       </a>
     </header>
+    <div class="scroll-progress"></div>
+  <main class="main-index">
     <section class="hero-section">
       <h1>Discover the Finest Drinks, Curated by Experts</h1>
       <p>Noble Dram: Your Gateway to Premium Beverages</p>
@@ -91,6 +92,7 @@
     <div class="product-grid">
       <div class="product-card">
         <img src="../static/images/jameson.jpg" alt="Product Name">
+        <p id="alert" class="flash-message">Added to cart</p>
         <h3>Jameson Irish Whiskey</h3>
         <p>Smooth and versatile, Jameson Irish Whiskey is triple-distilled for a balanced taste of honey, spice, and
           vanilla. Enjoy it neat, on the rocks, or in cocktails.</p>
@@ -99,6 +101,7 @@
       </div>
       <div class="product-card">
         <img src="../static/images/smirnoff.webp" alt="Product Name">
+        <p id="alert" class="flash-message">Added to cart</p>
         <h3>Smirnoff Vodka</h3>
         <p>Smirnoff Vodka is exceptionally smooth and clean, perfect for sipping or mixing. Enjoy its subtle sweetness
           and crisp finish in your favorite drinks.</p>
@@ -107,6 +110,7 @@
       </div>
       <div class="product-card">
         <img src="../static/images/asian-rum.webp" alt="Product Name">
+        <p id="alert" class="flash-message">Added to cart</p>
         <h3>Tanduay Gold Asian Rum</h3>
         <p>Smooth and mellow, Tanduay Gold is a Filipino rum with notes of caramel, vanilla, and tropical fruit. Aged in
           ex-bourbon barrels, it's ideal for sipping or cocktails.</p>
@@ -115,6 +119,7 @@
       </div>
       <div class="product-card">
         <img src="../static/images/royal_stag.webp" alt="Product Name">
+        <p id="alert" class="flash-message">Added to cart</p>
         <h3>Royal Stag Whiskey</h3>
         <p>A popular Indian whisky with a smooth and mellow blend of imported Scotch malts and Indian grain spirits.
           Enjoy hints of fruit and spice in every sip.</p>

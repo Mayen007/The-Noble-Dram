@@ -26,70 +26,133 @@
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="./index.html">Home</a>
-      <a href="./products">Products</a>
+      <a href="./products.html">Products</a>
       <a href="./about.html">About Us</a>
       <a href="./contact.html">Contact Us</a>
       <a href="./signup.html">Sign up</a>
       <a href="./login.html">Login</a>
     </div>
-    <span onclick="openNav()">&#9776;</span>
+    <span onclick="openNav()" class="menu">&#9776;</span>
     <a href="./index.html" class="brand">The Noble Dram</a>
     <a>
       <div class="counter" id="count-el">0</div>
       <i class="fas fa-shopping-cart cart"></i>
     </a>
   </header>
-  <section id="shop">
-    <h2>Our Products</h2>
-    <div class="filter-buttons">
-      <button class="filter-button">All</button>
-      <button class="filter-button">Wine</button>
-      <button class="filter-button">Beer</button>
-      <button class="filter-button">Spirits</button>
-      <button class="filter-button">Non-Alcoholic</button>
+  <div class="scroll-progress"></div>
+  <main>
+    <section id="shop">
+      <h2>Our Products</h2>
+      <div class="filter-buttons">
+        <button class="filter-button">All</button>
+        <button class="filter-button">Wine</button>
+        <button class="filter-button">Beer</button>
+        <button class="filter-button">Spirits</button>
+        <button class="filter-button">Non-Alcoholic</button>
+      </div>
+      <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="../static/images/4th-Street.webp" alt="Wine">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Red Wine</h3>
+          <p class="price">Ksh1,950.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Craft Beer</h3>
+          <p class="price">Ksh330.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="../static/images/Black-_-White.png" alt="Whiskey">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Black & White Whiskey</h3>
+          <p class="price">Ksh1,350.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card 4 -->
+        <div class="product-card">
+          <img src="../static/images/jagermeister.png" alt="Juice">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Jagermeister</h3>
+          <p class="price">Ksh3,999.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card 5 -->
+        <div class="product-card">
+          <img src="../static/images/johnnie-walker-blue-lable.webp" alt="Juice">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Johhnie Walker - Blue Label</h3>
+          <p class="price">Ksh29,000.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <img src="../static/images/hennessy-vs-cognac.png" alt="Juice">
+          <p id="alert" class="flash-message">Added to cart</p>
+          <h3>Hennessy</h3>
+          <p class="price">Ksh6,999.00</p>
+          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <section id="steps">
+      <h2>How to Order</h2>
+      <ol>
+        <li>Browse our product catalog.</li>
+        <li>Add your favorite items to the cart.</li>
+        <li>Proceed to checkout.</li>
+        <li>Enter your shipping and payment details.</li>
+        <li>Confirm your order.</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
+          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
+          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter Signup</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" required>
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
+          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
+          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+      </div>
     </div>
-    <div class="product-grid">
-      <!-- Product Card 1 -->
-      <div class="product-card">
-        <img src="../static/images/4th-Street.webp" alt="Wine">
-        <h3>Red Wine</h3>
-        <p class="price">Ksh1,950.00</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
-      <!-- Product Card 2 -->
-      <div class="product-card">
-        <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
-        <h3>Craft Beer</h3>
-        <p class="price">Ksh330.00</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
-      <!-- Product Card 3 -->
-      <div class="product-card">
-        <img src="../static/images/Black-_-White.png" alt="Whiskey">
-        <h3>Black & White Whiskey</h3>
-        <p class="price">Ksh1,350.00</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
-      <!-- Product Card 4 -->
-      <div class="product-card">
-        <img src="../static/images/jagermeister.png" alt="Juice">
-        <h3>Jagermeister</h3>
-        <p class="price">Ksh3,999.00</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
+    <div class="copy">
+      <p>&copy; 2024, The Noble Dram&trade;. All Rights Reserved.</p>
     </div>
-  </section>
-  <section id="steps">
-    <h2>How to Order</h2>
-    <ol>
-      <li>Browse our product catalog.</li>
-      <li>Add your favorite items to the cart.</li>
-      <li>Proceed to checkout.</li>
-      <li>Enter your shipping and payment details.</li>
-      <li>Confirm your order.</li>
-    </ol>
-  </section>
-
+  </footer>
   <script src="../static/js/script.js"></script>
 </body>
 

@@ -14,9 +14,9 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
+      max-width: 500px;
+      margin: auto;
     }
-
-    .login-container {}
 
     .logo {
       max-width: 150px;
@@ -33,7 +33,6 @@
       margin-bottom: 30px;
     }
 
-    /* Form Styling */
     .form-group {
       margin-bottom: 20px;
     }
@@ -55,6 +54,7 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 20px;
     }
 
     .form-group input[type="checkbox"] {
@@ -64,7 +64,7 @@
     .forgot-password {
       display: block;
       margin-top: 10px;
-      text-align: right;
+      /* text-align: right; */
       color: rgb(132, 84, 254);
       text-decoration: none;
     }
@@ -86,10 +86,10 @@
           <div class="form-group">
             <input type="password" id="password" name="password" placeholder="Password" required>
           </div>
-          <button type="submit">Login</button>
           <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
+            <input type="checkbox" name="remember"> Remember me
+          </label><br>
+          <button type="submit">Login</button>
           <a href="#" class="forgot-password">Forgot password?</a>
         </form>
 

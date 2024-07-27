@@ -13,6 +13,20 @@
     h2 {
       margin-top: 30px;
     }
+
+    .container,
+    h1 {
+      margin-top: 30px;
+    }
+
+    .about {
+      margin-bottom: 20px;
+    }
+
+    .about-us {
+      width: 85%;
+      margin: auto;
+    }
   </style>
 </head>
 
@@ -30,17 +44,18 @@
       <a href="./signup.html">Sign up</a>
       <a href="./login.html">Login</a>
     </div>
-    <span onclick="openNav()">&#9776;</span>
+    <span onclick="openNav()" class="menu">&#9776;</span>
     <a href="./index.html" class="brand">The Noble Dram</a>
     <a>
       <div class="counter" id="count-el">0</div>
       <i class="fas fa-shopping-cart cart"></i>
     </a>
   </header>
+  <div class="scroll-progress"></div>
   <main>
     <section class="about-us">
       <div class="container">
-        <h1>About Us</h1>
+        <h1 class="about">About Us</h1>
         <p>Welcome to The Noble Dram, your one-stop destination for premium beverages. We are passionate about bringing
           you the finest selection of wines, beers, spirits, and non-alcoholic drinks from around the world. Whether
           you're a connoisseur or simply looking to enjoy a nice drink, we've got something for everyone.</p>
@@ -63,6 +78,47 @@
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
+          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
+          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter Signup</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" required>
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
+          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
+          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy; 2024, The Noble Dram&trade;. All Rights Reserved.</p>
+    </div>
+  </footer>
 
   <script src="../static/js/script.js"></script>
 </body>
