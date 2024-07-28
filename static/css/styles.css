@@ -54,6 +54,7 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #111;
+  z-index: 2;
 
 }
 
@@ -229,6 +230,18 @@ header span {
   -webkit-user-select: none;
   user-select: none;
   margin-left: 15px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-section>h1 {
@@ -392,8 +405,9 @@ h2 {
 
 .view-more-link {
   display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 10px 15px;
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   color: white;
   text-decoration: none;
@@ -441,7 +455,7 @@ h2 {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #111;
   color: #fff;
   padding: 20px;
   text-align: left;
