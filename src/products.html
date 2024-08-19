@@ -33,10 +33,10 @@
       <a href="./login.html">Login</a>
     </div>
     <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="./index.html" class="brand">The Noble Dram</a>
-    <a>
-      <div class="counter" id="count-el">0</div>
-      <i class="fas fa-shopping-cart cart"></i>
+    <a href="../index.html" class="brand">The Noble Dram</a>
+    <a href="#" class="cart-link">
+      <span class="counter" id="count-el">0</span>
+      <i class="fas fa-shopping-cart"></i>
     </a>
   </header>
   <div class="scroll-progress"></div>
@@ -54,7 +54,6 @@
         <!-- Product Card 1 -->
         <div class="product-card">
           <img src="../static/images/4th-Street.webp" alt="Wine">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Red Wine</h3>
           <p class="price">Ksh1,950.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -62,7 +61,6 @@
         <!-- Product Card 2 -->
         <div class="product-card">
           <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Craft Beer</h3>
           <p class="price">Ksh330.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -70,7 +68,6 @@
         <!-- Product Card 3 -->
         <div class="product-card">
           <img src="../static/images/Black-_-White.png" alt="Whiskey">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Black & White Whiskey</h3>
           <p class="price">Ksh1,350.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -78,7 +75,6 @@
         <!-- Product Card 4 -->
         <div class="product-card">
           <img src="../static/images/jagermeister.png" alt="Juice">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Jagermeister</h3>
           <p class="price">Ksh3,999.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -86,7 +82,6 @@
         <!-- Product Card 5 -->
         <div class="product-card">
           <img src="../static/images/johnnie-walker-blue-lable.webp" alt="Juice">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Johhnie Walker - Blue Label</h3>
           <p class="price">Ksh29,000.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -94,7 +89,6 @@
         <!-- Product Card 6 -->
         <div class="product-card">
           <img src="../static/images/hennessy-vs-cognac.png" alt="Juice">
-          <p id="alert" class="flash-message">Added to cart</p>
           <h3>Hennessy</h3>
           <p class="price">Ksh6,999.00</p>
           <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
@@ -150,9 +144,10 @@
       </div>
     </div>
     <div class="copy">
-      <p>&copy; 2024, The Noble Dram&trade;. All Rights Reserved.</p>
+      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
     </div>
   </footer>
+  <p id="alert" class="flash-message">Added to cart</p>
   <script src="../static/js/script.js"></script>
 </body>
 

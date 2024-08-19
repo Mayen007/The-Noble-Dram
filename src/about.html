@@ -9,23 +9,16 @@
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    ul li,
-    h2 {
-      margin-top: 30px;
-    }
-
-    .container,
-    h1 {
-      margin-top: 30px;
-    }
-
-    .about {
-      margin-bottom: 20px;
-    }
-
-    .about-us {
+    .container {
       width: 85%;
       margin: auto;
+      line-height: 1.9rem;
+      text-align: justify;
+    }
+
+    .container>h1,
+    h2 {
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -45,10 +38,10 @@
       <a href="./login.html">Login</a>
     </div>
     <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="./index.html" class="brand">The Noble Dram</a>
-    <a>
-      <div class="counter" id="count-el">0</div>
-      <i class="fas fa-shopping-cart cart"></i>
+    <a href="../index.html" class="brand">The Noble Dram</a>
+    <a href="#" class="cart-link">
+      <span class="counter" id="count-el">0</span>
+      <i class="fas fa-shopping-cart"></i>
     </a>
   </header>
   <div class="scroll-progress"></div>
@@ -69,7 +62,7 @@
           seamless shopping experience. We aim to become the leading online store for drink enthusiasts, offering a
           diverse selection and personalized recommendations.</p>
         <h2>Our Values</h2>
-        <ul>
+        <ul class="values">
           <li><strong>Quality:</strong> We prioritize quality in every product we offer.</li>
           <li><strong>Variety:</strong> We offer a wide range of drinks to suit every taste.</li>
           <li><strong>Customer Satisfaction:</strong> We are dedicated to providing excellent customer service.</li>
@@ -116,7 +109,7 @@
       </div>
     </div>
     <div class="copy">
-      <p>&copy; 2024, The Noble Dram&trade;. All Rights Reserved.</p>
+      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
     </div>
   </footer>
 
