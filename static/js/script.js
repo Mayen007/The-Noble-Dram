@@ -38,3 +38,12 @@ function showFlashMessage(message, duration = 3000) {
 document.querySelectorAll('.add-to-cart').forEach(button => {
   button.addEventListener('click', addToCart);
 });
+
+document.addEventListener('scroll', () => {
+  const scrollProgress = document.querySelector('.scroll-progress');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  scrollProgress.style.width = `${scrollPercent}%`;
+});

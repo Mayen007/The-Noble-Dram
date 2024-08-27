@@ -68,33 +68,36 @@
       color: rgb(132, 84, 254);
       text-decoration: none;
     }
+
+    .signup-link a {
+      color: rgb(132, 84, 254);
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
-  <main>
-    <section id="login">
-      <div class="login-container">
-        <img src="../static/images/noble-dram.jpeg" alt="The Noble Dram Logo" class="logo">
-        <h2>Welcome Back</h2>
-        <p>Log in to your account to continue your journey.</p>
+  <main id="login">
+    <section class="login-container">
+      <img src="../static/images/noble-dram.jpeg" alt="The Noble Dram Logo" class="logo">
+      <h2>Welcome Back</h2>
+      <p>Log in to your account to continue your journey.</p>
 
-        <form id="login-form">
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="password" id="password" name="password" placeholder="Password" required>
-          </div>
-          <label>
-            <input type="checkbox" name="remember"> Remember me
-          </label><br>
-          <button type="submit">Login</button>
-          <a href="#" class="forgot-password">Forgot password?</a>
-        </form>
+      <form id="login-form">
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label><br>
+        <button type="submit">Login</button>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </form>
 
-        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
-      </div>
+      <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
     </section>
   </main>
 
