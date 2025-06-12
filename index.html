@@ -90,40 +90,7 @@
   </section>
   <section id="shop">
     <h2>Shop Our Collection</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="./static/images/jameson.jpg" alt="Product Name">
-        <h3>Jameson Irish Whiskey</h3>
-        <p>Smooth and versatile, Jameson Irish Whiskey is triple-distilled for a balanced taste of honey, spice, and
-          vanilla. Enjoy it neat, on the rocks, or in cocktails.</p>
-        <p class="price">KSh3,750 - 4,200</p>
-        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="./static/images/smirnoff.webp" alt="Product Name">
-        <h3>Smirnoff Vodka</h3>
-        <p>Smirnoff Vodka is exceptionally smooth and clean, perfect for sipping or mixing. Enjoy its subtle sweetness
-          and crisp finish in your favorite drinks.</p>
-        <p class="price">KSh3,000 - 3,500</p>
-        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="./static/images/asian-rum.webp" alt="Product Name">
-        <h3>Tanduay Gold Asian Rum</h3>
-        <p>Smooth and mellow, Tanduay Gold is a Filipino rum with notes of caramel, vanilla, and tropical fruit. Aged in
-          ex-bourbon barrels, it's ideal for sipping or cocktails.</p>
-        <p class="price"> KSh2,000 - 2,500</p>
-        <button class="add-to-cart" id="add-to-cart" onclick="addCart()">Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="./static/images/royal_stag.webp" alt="Product Name">
-        <h3>Royal Stag Whiskey</h3>
-        <p>A popular Indian whisky with a smooth and mellow blend of imported Scotch malts and Indian grain spirits.
-          Enjoy hints of fruit and spice in every sip.</p>
-        <p class="price">Ksh1,119.99</p>
-        <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
-      </div>
-    </div>
+    <div class="product-grid" id="product-id"></div>
     <a href="./src/products.html" class="view-more-link">View More Products</a>
   </section>
   <section id="promotions">
@@ -179,7 +146,7 @@
       <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
     </div>
   </footer>
-  <p id="alert" class="flash-message">Added to cart</p>
+  <p id="alert" class="flash-message"></p>
   <script src="./static/js/script.js"></script>
 </body>
 

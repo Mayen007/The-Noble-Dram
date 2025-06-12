@@ -48,55 +48,93 @@
           <img src="../static/images/4th-Street.webp" alt="Wine">
           <h3>Red Wine</h3>
           <p class="price">Ksh1,950.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
         <!-- Product Card 2 -->
         <div class="product-card">
           <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
           <h3>Craft Beer</h3>
           <p class="price">Ksh330.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
         <!-- Product Card 3 -->
         <div class="product-card">
           <img src="../static/images/Black-_-White.png" alt="Whiskey">
           <h3>Black & White Whiskey</h3>
           <p class="price">Ksh1,350.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
         <!-- Product Card 4 -->
         <div class="product-card">
           <img src="../static/images/jagermeister.png" alt="Juice">
           <h3>Jagermeister</h3>
           <p class="price">Ksh3,999.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
         <!-- Product Card 5 -->
         <div class="product-card">
           <img src="../static/images/johnnie-walker-blue-lable.webp" alt="Juice">
           <h3>Johhnie Walker - Blue Label</h3>
           <p class="price">Ksh29,000.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
         <!-- Product Card 6 -->
         <div class="product-card">
           <img src="../static/images/hennessy-vs-cognac.png" alt="Juice">
           <h3>Hennessy</h3>
           <p class="price">Ksh6,999.00</p>
-          <button class="add-to-cart" onclick="addCart()">Add to Cart</button>
+          <button class="add-to-cart" >Add to Cart</button>
         </div>
       </div>
     </section>
-    <section id="steps">
-      <h2>How to Order</h2>
-      <ol>
-        <li>Browse our product catalog.</li>
-        <li>Add your favorite items to the cart.</li>
-        <li>Proceed to checkout.</li>
-        <li>Enter your shipping and payment details.</li>
-        <li>Confirm your order.</li>
-      </ol>
+    <section id="steps" class="how-to-order-section">
+      <div class="container">
+        <h2 class="section-title">How to Order</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-icon">
+              <div class="step-number">1</div>
+              <img src="../static/images/icons/browse.svg" alt="Browse Products">
+            </div>
+            <h3>Browse Products</h3>
+            <p>Explore our exclusive selection of premium drinks and find the perfect ones for you.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <div class="step-number">2</div>
+              <img src="../static/images/icons/cart.svg" alt="Add to Cart">
+            </div>
+            <h3>Add to Cart</h3>
+            <p>Select your desired items and add them to your cart for a seamless checkout experience.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <div class="step-number">3</div>
+              <img src="../static/images/icons/checkout.svg" alt="Proceed to Checkout">
+            </div>
+            <h3>Proceed to Checkout</h3>
+            <p>Review your cart and proceed to the checkout when you're ready to complete your order.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <div class="step-number">4</div>
+              <img src="../static/images/icons/shipping.svg" alt="Enter Details">
+            </div>
+            <h3>Enter Details</h3>
+            <p>Fill in your shipping and payment details to ensure a smooth delivery.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <div class="step-number">5</div>
+              <img src="../static/images/icons/confirm.svg" alt="Confirm Order">
+            </div>
+            <h3>Confirm Order</h3>
+            <p>Confirm your order and receive a confirmation with the delivery timeline.</p>
+          </div>
+        </div>
+      </div>
     </section>
+    
   </main>
   <footer class="footer">
     <div class="footer-container">
@@ -139,7 +177,7 @@
       <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
     </div>
   </footer>
-  <p id="alert" class="flash-message">Added to cart</p>
+  <p id="alert" class="flash-message"></p>
   <script src="../static/js/script.js"></script>
 </body>
 
