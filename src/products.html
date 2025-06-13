@@ -4,181 +4,376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection | The Noble Dram</title>
+  <meta name="description"
+    content="Explore our collection of premium spirits including whiskeys, vodkas, rums and gins.">
   <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
-  <title>Products - The Noble Dram</title>
-  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="marquee">
-    <span>Save 10% on your first purchase with code <a href="./products.html">#WELCOME10</a></span>
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Save 10% on your first purchase with code <strong>WELCOME10</strong> | <a href="./products.html">Shop Now</a>
+      </p>
+      <div class="announcement-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
   </div>
-  <header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="../index.html">Home</a>
-      <a href="./products.html">Products</a>
-      <a href="./about.html">About Us</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./signup.html">Sign up</a>
-      <a href="./login.html">Login</a>
+  <header class="site-header">
+    <div class="container header-container">
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <a href="/index.html" class="site-logo">
+        <img src="./static/images/noble-dram-logo.png" alt="The Noble Dram">
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="./products.html" class="nav-link">Collection</a>
+            <ul class="dropdown-menu">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+              <li><a href="./products.html?category=limited">Limited Edition</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="./login.html" class="action-btn" aria-label="Account">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="action-btn cart-toggle" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="count-el">0</span>
+        </button>
+      </div>
     </div>
-    <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="../index.html" class="brand">The Noble Dram</a>
-    <a href="#" class="cart-link">
-      <span class="counter" id="count-el">0</span>
-      <i class="fas fa-shopping-cart"></i>
-    </a>
-  </header>
-  <div class="scroll-progress"></div>
-  <main>
-    <section id="shop">
-      <h2>Our Products</h2>
-      <div class="filter-buttons">
-        <button class="filter-button">All</button>
-        <button class="filter-button">Wine</button>
-        <button class="filter-button">Beer</button>
-        <button class="filter-button">Spirits</button>
-        <button class="filter-button">Non-Alcoholic</button>
-      </div>
-      <div class="product-grid">
-        <!-- Product Card 1 -->
-        <div class="product-card">
-          <img src="../static/images/4th-Street.webp" alt="Wine">
-          <h3>Red Wine</h3>
-          <p class="price">Ksh1,950.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-        <!-- Product Card 2 -->
-        <div class="product-card">
-          <img src="../static/images/254-Sand-Trap.jpg" alt="Beer">
-          <h3>Craft Beer</h3>
-          <p class="price">Ksh330.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-        <!-- Product Card 3 -->
-        <div class="product-card">
-          <img src="../static/images/Black-_-White.png" alt="Whiskey">
-          <h3>Black & White Whiskey</h3>
-          <p class="price">Ksh1,350.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-        <!-- Product Card 4 -->
-        <div class="product-card">
-          <img src="../static/images/jagermeister.png" alt="Juice">
-          <h3>Jagermeister</h3>
-          <p class="price">Ksh3,999.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-        <!-- Product Card 5 -->
-        <div class="product-card">
-          <img src="../static/images/johnnie-walker-blue-lable.webp" alt="Juice">
-          <h3>Johhnie Walker - Blue Label</h3>
-          <p class="price">Ksh29,000.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-        <!-- Product Card 6 -->
-        <div class="product-card">
-          <img src="../static/images/hennessy-vs-cognac.png" alt="Juice">
-          <h3>Hennessy</h3>
-          <p class="price">Ksh6,999.00</p>
-          <button class="add-to-cart" >Add to Cart</button>
-        </div>
-      </div>
-    </section>
-    <section id="steps" class="how-to-order-section">
+
+    <!-- Search overlay -->
+    <div class="search-overlay">
       <div class="container">
-        <h2 class="section-title">How to Order</h2>
-        <div class="steps-container">
-          <div class="step">
-            <div class="step-icon">
-              <div class="step-number">1</div>
-              <img src="../static/images/icons/browse.svg" alt="Browse Products">
-            </div>
-            <h3>Browse Products</h3>
-            <p>Explore our exclusive selection of premium drinks and find the perfect ones for you.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <div class="step-number">2</div>
-              <img src="../static/images/icons/cart.svg" alt="Add to Cart">
-            </div>
-            <h3>Add to Cart</h3>
-            <p>Select your desired items and add them to your cart for a seamless checkout experience.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <div class="step-number">3</div>
-              <img src="../static/images/icons/checkout.svg" alt="Proceed to Checkout">
-            </div>
-            <h3>Proceed to Checkout</h3>
-            <p>Review your cart and proceed to the checkout when you're ready to complete your order.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <div class="step-number">4</div>
-              <img src="../static/images/icons/shipping.svg" alt="Enter Details">
-            </div>
-            <h3>Enter Details</h3>
-            <p>Fill in your shipping and payment details to ensure a smooth delivery.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <div class="step-number">5</div>
-              <img src="../static/images/icons/confirm.svg" alt="Confirm Order">
-            </div>
-            <h3>Confirm Order</h3>
-            <p>Confirm your order and receive a confirmation with the delivery timeline.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  </main>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html/#services">Services</a></li>
-          <li><a href="./products.html">Products</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
-          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
-          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Newsletter Signup</h3>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
-          <input type="submit" value="Subscribe">
+        <form class="search-form">
+          <input type="search" placeholder="Search for products..." aria-label="Search">
+          <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
         </form>
+        <button class="search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
       </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
-          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
-          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+    </div>
+  </header>
+
+  <!-- Collection Hero -->
+  <section class="page-hero" style="background-image: url('../static/images/noble-dram-bg.jpg');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1>Our Collection</h1>
+        <p>Discover premium spirits curated for exceptional moments</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection grid with filters -->
+  <section class="collection-section">
+    <div class="container">
+      <div class="collection-layout">
+        <!-- Mobile filter toggle -->
+        <button class="filter-toggle" id="filter-toggle">
+          <i class="fas fa-filter"></i> Filters
+        </button>
+
+        <!-- Filters sidebar -->
+        <aside class="filters-sidebar" id="filters-sidebar">
+          <div class="filters-header">
+            <h3>Filters</h3>
+            <button class="filters-close" id="filters-close" aria-label="Close filters">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Category</h4>
+            <ul class="filter-options">
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="category" value="whiskey">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Whiskey</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="category" value="vodka">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Vodka</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="category" value="rum">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Rum</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="category" value="gin">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Gin</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="price-range-slider">
+              <div class="price-inputs">
+                <div class="price-input">
+                  <span>KSh</span>
+                  <input type="number" id="min-price" min="0" max="100000" value="0">
+                </div>
+                <span class="price-separator">to</span>
+                <div class="price-input">
+                  <span>KSh</span>
+                  <input type="number" id="max-price" min="0" max="100000" value="50000">
+                </div>
+              </div>
+              <div class="range-slider">
+                <input type="range" id="price-range-min" min="0" max="100000" value="0" step="1000">
+                <input type="range" id="price-range-max" min="0" max="100000" value="50000" step="1000">
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Rating</h4>
+            <ul class="filter-options">
+              <li>
+                <label class="custom-radio">
+                  <input type="radio" name="rating" value="4">
+                  <span class="radio-mark"></span>
+                  <span class="stars">★★★★☆</span> & Up
+                </label>
+              </li>
+              <li>
+                <label class="custom-radio">
+                  <input type="radio" name="rating" value="3">
+                  <span class="radio-mark"></span>
+                  <span class="stars">★★★☆☆</span> & Up
+                </label>
+              </li>
+              <li>
+                <label class="custom-radio">
+                  <input type="radio" name="rating" value="2">
+                  <span class="radio-mark"></span>
+                  <span class="stars">★★☆☆☆</span> & Up
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h4>Origin</h4>
+            <ul class="filter-options">
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="origin" value="scotland">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Scotland</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="origin" value="ireland">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Ireland</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="origin" value="japan">
+                  <span class="checkmark"></span>
+                  <span class="label-text">Japan</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="origin" value="usa">
+                  <span class="checkmark"></span>
+                  <span class="label-text">United States</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filters-actions">
+            <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+            <button class="btn btn-outline" id="clear-filters">Clear All</button>
+          </div>
+        </aside>
+
+        <!-- Products container -->
+        <div class="products-container">
+          <div class="collection-header">
+            <div class="collection-results">
+              <p>Showing <span id="products-count">16</span> products</p>
+            </div>
+
+            <div class="collection-sorting">
+              <div class="view-options">
+                <button class="view-btn grid-view active" aria-label="Grid view">
+                  <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn list-view" aria-label="List view">
+                  <i class="fas fa-list"></i>
+                </button>
+              </div>
+
+              <div class="sort-options">
+                <select id="sort-products" aria-label="Sort products">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                  <option value="rating">Customer Rating</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded via JavaScript -->
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-arrow prev" aria-label="Previous page">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="pagination-numbers">
+              <button class="pagination-number active">1</button>
+              <button class="pagination-number">2</button>
+              <button class="pagination-number">3</button>
+            </div>
+            <button class="pagination-arrow next" aria-label="Next page">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="copy">
-      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
+  </section>
+
+  <!-- Recently viewed -->
+  <section class="recently-viewed">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recently Viewed</h2>
+      </div>
+      <div class="products-slider" id="recently-viewed-products">
+        <!-- Recently viewed products will be added dynamically -->
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a href="../index.html" class="footer-logo">
+              <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram">
+            </a>
+            <p>Purveyors of exceptional spirits since 2015. We bring the world's finest beverages to discerning
+              connoisseurs.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./products.html">Shop Collection</a></li>
+              <li><a href="./about.html">Our Story</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Help & Info</h4>
+            <ul class="footer-links">
+              <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./terms-of-service.html">Terms of Service</a></li>
+              <li><a href="./shipping.html">Shipping Information</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <address>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Drink Lane, Nairobi</p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+254123456789">+254 123 456 789</a></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:info@nobledram.com">info@nobledram.com</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; <span id="current-year">2025</span> The Noble Dram. All rights reserved.</p>
+        <div class="payment-methods">
+          <img src="../static/images/payment-methods.png" alt="Payment methods">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <p>Please drink responsibly. Do not share content with anyone under the legal drinking age.</p>
+      </div>
     </div>
   </footer>
-  <p id="alert" class="flash-message"></p>
   <script src="../static/js/script.js"></script>
+  <script src="../static/js/products.js"></script>
 </body>
 
 </html>

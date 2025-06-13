@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Name | The Noble Dram</title>
+  <meta name="description" content="Product description here">
+  <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- ...header code with updated paths... -->
+
+  <!-- Product Detail -->
+  <section class="product-detail-section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="./products.html">Collection</a>
+        <span class="separator">/</span>
+        <a href="./products.html?category=whiskey">Whiskey</a>
+        <span class="separator">/</span>
+        <span class="current">Jameson Irish Whiskey</span>
+      </div>
+
+      <div class="product-detail">
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img id="main-product-image" src="../static/images/products/jameson-large.jpg" alt="Jameson Irish Whiskey">
+            <button class="zoom-trigger" aria-label="Zoom image">
+              <i class="fas fa-search-plus"></i>
+            </button>
+          </div>
+
+          <div class="product-thumbnails">
+            <button class="thumbnail-item active" data-image="../static/images/products/jameson-large.jpg">
+              <img src="../static/images/products/jameson-thumb-1.jpg" alt="Jameson Irish Whiskey">
+            </button>
+            <button class="thumbnail-item" data-image="../static/images/products/jameson-detail-1.jpg">
+              <img src="../static/images/products/jameson-thumb-2.jpg" alt="Jameson Irish Whiskey - Detail">
+            </button>
+            <button class="thumbnail-item" data-image="../static/images/products/jameson-detail-2.jpg">
+              <img src="../static/images/products/jameson-thumb-3.jpg" alt="Jameson Irish Whiskey - Closeup">
+            </button>
+            <button class="thumbnail-item" data-image="../static/images/products/jameson-detail-3.jpg">
+              <img src="../static/images/products/jameson-thumb-4.jpg" alt="Jameson Irish Whiskey - Package">
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1 class="product-title">Jameson Irish Whiskey</h1>
+
+          <div class="product-meta">
+            <div class="product-rating">
+              <div class="stars">★★★★☆</div>
+              <a href="#product-reviews" class="review-count">25 reviews</a>
+            </div>
+            <span class="product-sku">SKU: JMS-001-750</span>
+            <span class="product-stock in-stock">In Stock</span>
+          </div>
+
+          <div class="product-price">
+            <span class="current-price">KSh3,750.00</span>
+          </div>
+
+          <div class="product-short-description">
+            <p>Triple-distilled and remarkably smooth, Jameson Irish Whiskey has a perfect balance of spicy, nutty and
+              vanilla notes with hints of sweet sherry.</p>
+          </div>
+
+          <div class="product-options">
+            <div class="option-group">
+              <label for="product-size">Size</label>
+              <div class="option-buttons">
+                <button class="option-btn">350ml</button>
+                <button class="option-btn active">750ml</button>
+                <button class="option-btn">1L</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <div class="quantity-selector">
+              <button class="qty-btn minus" aria-label="Decrease quantity">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input type="number" id="product-quantity" value="1" min="1" max="99" aria-label="Quantity">
+              <button class="qty-btn plus" aria-label="Increase quantity">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+
+            <button id="add-to-cart" class="btn btn-primary">Add to Cart</button>
+            <button class="btn-icon wishlist-btn" aria-label="Add to wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="product-additional-info">
+            <div class="delivery-info">
+              <i class="fas fa-truck"></i>
+              <span>Free shipping for orders over KSh5,000</span>
+            </div>
+            <div class="secure-info">
+              <i class="fas fa-lock"></i>
+              <span>Secure payment</span>
+            </div>
+          </div>
+
+          <div class="product-share">
+            <span>Share:</span>
+            <div class="social-share">
+              <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Share on Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="Share by Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-tabs">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="description">Description</button>
+          <button class="tab-btn" data-tab="details">Details & Specs</button>
+          <button class="tab-btn" data-tab="reviews">Reviews (25)</button>
+        </div>
+
+        <div class="tabs-content">
+          <div class="tab-panel active" id="description">
+            <div class="tab-content">
+              <h3>Product Description</h3>
+              <p>Jameson Irish Whiskey is a blend of pot still and fine grain whiskeys that is triple-distilled to
+                deliver exceptional smoothness. Perfect for any occasion, Jameson is best enjoyed with friends.</p>
+
+              <p>The world's best-selling Irish whiskey is exceptionally smooth and perfectly balanced with sweet wood
+                and spicy tones. The rich heritage dates back to 1780 when the Jameson dynasty was founded in Dublin,
+                and continues to thrive in the heart and souls of all who try it today.</p>
+
+              <h4>Tasting Notes</h4>
+              <ul>
+                <li><strong>Nose:</strong> Light floral fragrance, peppered with spicy wood and sweet notes</li>
+                <li><strong>Taste:</strong> Perfect balance of spicy, nutty and vanilla with hints of sweet sherry</li>
+                <li><strong>Finish:</strong> Smooth and mellow, with a pleasant lingering warmth</li>
+              </ul>
+
+              <h4>Serving Suggestion</h4>
+              <p>Enjoy neat, on the rocks, with a dash of water, or in classic cocktails like the Whiskey Sour, Irish
+                Coffee, or the refreshing Jameson, Ginger Ale & Lime.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="details">
+            <div class="tab-content">
+              <h3>Product Details</h3>
+              <table class="product-specs">
+                <tr>
+                  <th>Country</th>
+                  <td>Ireland</td>
+                </tr>
+                <tr>
+                  <th>Region</th>
+                  <td>County Cork</td>
+                </tr>
+                <tr>
+                  <th>Distillery</th>
+                  <td>Midleton Distillery</td>
+                </tr>
+                <tr>
+                  <th>Type</th>
+                  <td>Blended Irish Whiskey</td>
+                </tr>
+                <tr>
+                  <th>Alcohol Content</th>
+                  <td>40% ABV (80 Proof)</td>
+                </tr>
+                <tr>
+                  <th>Age Statement</th>
+                  <td>No Age Statement (Blend of 4-7 year old whiskeys)</td>
+                </tr>
+                <tr>
+                  <th>Bottle Size</th>
+                  <td>750ml</td>
+                </tr>
+                <tr>
+                  <th>Production Process</th>
+                  <td>Triple distilled from a blend of pot still and grain whiskeys</td>
+                </tr>
+                <tr>
+                  <th>Maturation</th>
+                  <td>Aged in oak barrels previously used for bourbon and sherry</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="reviews">
+            <div class="tab-content">
+              <div class="reviews-summary">
+                <div class="average-rating">
+                  <div class="rating-number">4.0</div>
+                  <div class="rating-stars">★★★★☆</div>
+                  <div class="total-reviews">Based on 25 reviews</div>
+                </div>
+
+                <div class="rating-breakdown">
+                  <div class="rating-row">
+                    <div class="stars">5 stars</div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 60%;"></div>
+                    </div>
+                    <div class="count">15</div>
+                  </div>
+                  <div class="rating-row">
+                    <div class="stars">4 stars</div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 20%;"></div>
+                    </div>
+                    <div class="count">5</div>
+                  </div>
+                  <div class="rating-row">
+                    <div class="stars">3 stars</div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 12%;"></div>
+                    </div>
+                    <div class="count">3</div>
+                  </div>
+                  <div class="rating-row">
+                    <div class="stars">2 stars</div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 8%;"></div>
+                    </div>
+                    <div class="count">2</div>
+                  </div>
+                  <div class="rating-row">
+                    <div class="stars">1 star</div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 0%;"></div>
+                    </div>
+                    <div class="count">0</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="review-list">
+                <!-- Individual reviews will be loaded here -->
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer">
+                      <div class="avatar">JD</div>
+                      <div class="reviewer-name">John D.</div>
+                    </div>
+                    <div class="review-date">15 May 2025</div>
+                  </div>
+                  <div class="review-rating">★★★★★</div>
+                  <h4 class="review-title">Excellent everyday whiskey</h4>
+                  <p class="review-text">This is my go-to whiskey for everyday enjoyment. Smooth, balanced, and great
+                    value for money. Works well neat or in cocktails.</p>
+                </div>
+
+                <!-- More reviews would be loaded here -->
+              </div>
+
+              <div class="write-review">
+                <button class="btn btn-secondary" id="write-review-btn">Write a Review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You may also like -->
+  <section class="related-products">
+    <div class="container">
+      <div class="section-header">
+        <h2>You May Also Like</h2>
+      </div>
+      <div class="products-slider" id="related-products">
+        <!-- Related products will be added dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Recently viewed -->
+  <section class="recently-viewed">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recently Viewed</h2>
+      </div>
+      <div class="products-slider" id="recently-viewed-products">
+        <!-- Recently viewed products will be added dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Product image zoom modal -->
+  <div class="modal" id="image-zoom-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="zoom-container">
+        <img id="zoomed-image" src="../static/images/products/jameson-large.jpg" alt="Jameson Irish Whiskey">
+      </div>
+    </div>
+  </div>
+
+  <!-- Review form modal -->
+  <div class="modal" id="review-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3>Write a Review</h3>
+      <form id="review-form">
+        <div class="form-group">
+          <label for="review-name">Your Name</label>
+          <input type="text" id="review-name" required>
+        </div>
+        <div class="form-group">
+          <label for="review-email">Email</label>
+          <input type="email" id="review-email" required>
+        </div>
+        <div class="form-group">
+          <label>Rating</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" aria-label="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" aria-label="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" aria-label="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" aria-label="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" aria-label="1 star">★</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="review-title">Review Title</label>
+          <input type="text" id="review-title" required>
+        </div>
+        <div class="form-group">
+          <label for="review-text">Your Review</label>
+          <textarea id="review-text" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- ...footer code with updated paths... -->
+
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/product-detail.js"></script>
+</body>
+
+</html>

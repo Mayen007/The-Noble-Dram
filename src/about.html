@@ -4,116 +4,531 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - The Noble Dram</title>
+  <title>Our Story - The Noble Dram</title>
+  <meta name="description"
+    content="Discover the story, values and passion behind The Noble Dram - purveyors of exceptional spirits since 2015.">
   <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/about.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    .container {
-      width: 85%;
-      margin: auto;
-      line-height: 1.9rem;
-      text-align: justify;
-    }
-
-    .container>h1,
-    h2 {
-      margin-top: 30px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="marquee">
-    <span>Save 10% on your first purchase with code <a href="./products.html">#WELCOME10</a></span>
-  </div>
-  <header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="../index.html">Home</a>
-      <a href="./products.html">Products</a>
-      <a href="./about.html">About Us</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./signup.html">Sign up</a>
-      <a href="./login.html">Login</a>
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Save 10% on your first purchase with code <strong>WELCOME10</strong> | <a href="./products.html">Shop Now</a>
+      </p>
+      <div class="announcement-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="../index.html" class="brand">The Noble Dram</a>
-    <a href="#" class="cart-link">
-      <span class="counter" id="count-el">0</span>
-      <i class="fas fa-shopping-cart"></i>
-    </a>
-  </header>
-  <div class="scroll-progress"></div>
-  <main>
-    <section class="about-us">
-      <div class="container">
-        <h1 class="about">About Us</h1>
-        <p>Welcome to The Noble Dram, your one-stop destination for premium beverages. We are passionate about bringing
-          you the finest selection of wines, beers, spirits, and non-alcoholic drinks from around the world. Whether
-          you're a connoisseur or simply looking to enjoy a nice drink, we've got something for everyone.</p>
-        <p>At The Noble Dram, we believe in quality, variety, and customer satisfaction. Our team of experts is
-          dedicated to sourcing the best products and providing you with detailed descriptions, personalized
-          recommendations, and excellent customer service.</p>
-        <p>We are committed to making your shopping experience enjoyable and convenient. Explore our extensive catalog,
-          discover new favorites, and enjoy exclusive promotions. Cheers to great drinks and even better moments!</p>
-        <h2>Our Mission</h2>
-        <p>Our mission is to provide our customers with the highest quality beverages, exceptional service, and a
-          seamless shopping experience. We aim to become the leading online store for drink enthusiasts, offering a
-          diverse selection and personalized recommendations.</p>
-        <h2>Our Values</h2>
-        <ul class="values">
-          <li><strong>Quality:</strong> We prioritize quality in every product we offer.</li>
-          <li><strong>Variety:</strong> We offer a wide range of drinks to suit every taste.</li>
-          <li><strong>Customer Satisfaction:</strong> We are dedicated to providing excellent customer service.</li>
-          <li><strong>Convenience:</strong> We strive to make your shopping experience easy and enjoyable.</li>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <a href="/index.html" class="site-logo">
+        <img src="./static/images/noble-dram-logo.png" alt="The Noble Dram">
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="./products.html" class="nav-link">Collection</a>
+            <ul class="dropdown-menu">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+              <li><a href="./products.html?category=limited">Limited Edition</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
         </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="./login.html" class="action-btn" aria-label="Account">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="action-btn cart-toggle" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="count-el">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay">
+      <div class="container">
+        <form class="search-form">
+          <input type="search" placeholder="Search for products..." aria-label="Search">
+          <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Page hero section -->
+  <section class="page-hero" style="background-image: url('../static/images/about-hero-bg.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Our Story</h1>
+        <p>Craftsmanship, Passion, and the Pursuit of Excellence</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="about-page">
+    <!-- Introduction section -->
+    <section class="about-intro">
+      <div class="container">
+        <div class="intro-content">
+          <span class="section-subheading">Welcome to</span>
+          <h2>The Noble Dram</h2>
+          <div class="intro-text">
+            <p>Welcome to The Noble Dram, where our passion for exceptional spirits drives everything we do. Since 2015,
+              we've been dedicated to bringing connoisseurs and casual enthusiasts alike the finest selection of premium
+              beverages from around the world.</p>
+            <p>More than just a spirits retailer, we're a community of individuals who appreciate the artistry,
+              tradition, and craftsmanship behind every bottle. Whether you're a seasoned whiskey aficionado or simply
+              looking to enjoy a quality drink, our curated collection offers something extraordinary for every palate.
+            </p>
+          </div>
+        </div>
+        <div class="intro-image">
+          <img src="../static/images/about-intro.jpg" alt="The Noble Dram store interior">
+        </div>
+      </div>
+    </section>
+
+    <!-- Our journey timeline section -->
+    <section class="our-journey">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">Our Journey</span>
+          <h2>From Passion to Purpose</h2>
+          <p>Tracing the evolution of The Noble Dram through the years</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2015</div>
+            <div class="timeline-content">
+              <h3>The Beginning</h3>
+              <p>The Noble Dram was born from a shared passion among friends for discovering exceptional spirits. What
+                began as private tastings in Nairobi grew into a vision to bring premium spirits to discerning
+                customers.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2017</div>
+            <div class="timeline-content">
+              <h3>First Storefront</h3>
+              <p>We opened our first physical location in Nairobi, creating a space where customers could explore our
+                carefully curated collection and receive personalized recommendations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019</div>
+            <div class="timeline-content">
+              <h3>Expanding Horizons</h3>
+              <p>We launched our online store, bringing our exceptional collection to customers across the country,
+                while hosting our first series of tasting events and masterclasses.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+              <h3>Beyond Borders</h3>
+              <p>Partnerships with distilleries around the world allowed us to offer exclusive and limited-edition
+                spirits, cementing our reputation as purveyors of the extraordinary.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>Today & Beyond</h3>
+              <p>Today, The Noble Dram continues to grow, guided by our founding principles of quality, expertise, and
+                exceptional customer experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values section -->
+    <section class="our-values">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">Our Values</span>
+          <h2>What Drives Us</h2>
+          <p>The core principles that guide everything we do</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Quality Without Compromise</h3>
+            <p>We curate only the finest spirits that meet our exacting standards. Every bottle in our collection is
+              chosen for its exceptional quality and character.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Authentic Relationships</h3>
+            <p>We build genuine connections with our customers, suppliers, and the communities of craftspeople behind
+              each product we offer.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Knowledge & Expertise</h3>
+            <p>We're committed to deepening our understanding of spirits and sharing that expertise with our community
+              through education and personalized guidance.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Responsible Enjoyment</h3>
+            <p>We promote the appreciation of fine spirits as an experience to be savored mindfully, with respect for
+              tradition and responsible consumption.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team section -->
+    <section class="our-team">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">Meet Our Team</span>
+          <h2>The People Behind the Passion</h2>
+          <p>Our dedicated team of spirits enthusiasts and experts</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image">
+              <img src="../static/images/team/founder.jpg" alt="James Mwangi - Founder & Head Curator">
+            </div>
+            <div class="member-info">
+              <h3>James Mwangi</h3>
+              <p class="member-role">Founder & Head Curator</p>
+              <p class="member-bio">With over 15 years in the spirits industry, James founded The Noble Dram to share
+                his passion for exceptional beverages with the world.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <img src="../static/images/team/whiskey-expert.jpg" alt="Sarah Ochieng - Whiskey Specialist">
+            </div>
+            <div class="member-info">
+              <h3>Sarah Ochieng</h3>
+              <p class="member-role">Whiskey Specialist</p>
+              <p class="member-bio">A certified whiskey sommelier, Sarah brings her extensive knowledge of whiskey
+                regions, distillation methods, and tasting notes to our selection process.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <img src="../static/images/team/spirits-expert.jpg" alt="David Kamau - Global Spirits Expert">
+            </div>
+            <div class="member-info">
+              <h3>David Kamau</h3>
+              <p class="member-role">Global Spirits Expert</p>
+              <p class="member-bio">David travels the world discovering unique spirits and building relationships with
+                distilleries to bring exceptional finds to our collection.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience gallery section -->
+    <section class="experience-gallery">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">The Experience</span>
+          <h2>Moments Worth Savoring</h2>
+          <p>Glimpses into the world of The Noble Dram</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="../static/images/gallery/tasting-event.jpg" alt="Whiskey tasting event">
+            <div class="gallery-caption">
+              <h4>Tasting Events</h4>
+              <p>Guided explorations through the world of fine spirits</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../static/images/gallery/store-interior.jpg" alt="Our store interior">
+          </div>
+          <div class="gallery-item">
+            <img src="../static/images/gallery/whiskey-selection.jpg" alt="Premium whiskey selection">
+          </div>
+          <div class="gallery-item">
+            <img src="../static/images/gallery/masterclass.jpg" alt="Spirits masterclass">
+          </div>
+          <div class="gallery-item">
+            <img src="../static/images/gallery/limited-editions.jpg" alt="Limited edition collection">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">What People Say</span>
+          <h2>Customer Experiences</h2>
+          <p>The voices of our valued community</p>
+        </div>
+
+        <div class="testimonial-carousel">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">The Noble Dram has transformed my appreciation for whiskey. Their
+                knowledgeable staff guided me from being a casual drinker to understanding the nuances of different
+                regions and styles. Every bottle I've purchased has been exceptional.</p>
+              <div class="testimonial-author">
+                <img src="../static/images/testimonials/customer1.jpg" alt="Michael K.">
+                <div>
+                  <h4>Michael K.</h4>
+                  <p>Whiskey Enthusiast</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">I ordered a rare bottle as a gift for my husband's 40th birthday, and The
+                Noble Dram went above and beyond. The packaging was impeccable, and they included tasting notes specific
+                to the bottle. It made the gift even more special.</p>
+              <div class="testimonial-author">
+                <img src="../static/images/testimonials/customer2.jpg" alt="Lisa O.">
+                <div>
+                  <h4>Lisa O.</h4>
+                  <p>Loyal Customer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">As someone who enjoys hosting tasting evenings, I've found The Noble Dram to
+                be an invaluable resource. Their curated collections have introduced my friends to spirits they never
+                would have discovered otherwise.</p>
+              <div class="testimonial-author">
+                <img src="../static/images/testimonials/customer3.jpg" alt="Daniel M.">
+                <div>
+                  <h4>Daniel M.</h4>
+                  <p>Spirits Collector</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-controls">
+            <button class="testimonial-dot active" data-slide="0" aria-label="View testimonial 1"></button>
+            <button class="testimonial-dot" data-slide="1" aria-label="View testimonial 2"></button>
+            <button class="testimonial-dot" data-slide="2" aria-label="View testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="about-cta" style="background-image: url('../static/images/cta-bg.jpg');">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Join Our Community</h2>
+          <p>Become part of The Noble Dram experience. Discover exceptional spirits, attend exclusive events, and enjoy
+            member benefits.</p>
+          <div class="cta-buttons">
+            <a href="./products.html" class="btn btn-primary">Explore Collection</a>
+            <a href="./contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html/#services">Services</a></li>
-          <li><a href="./products.html">Products</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
-          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
-          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Newsletter Signup</h3>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
-          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
-          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a href="../index.html" class="footer-logo">
+              <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram">
+            </a>
+            <p>Purveyors of exceptional spirits since 2015. We bring the world's finest beverages to discerning
+              connoisseurs.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./products.html">Shop Collection</a></li>
+              <li><a href="./about.html">Our Story</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Help & Info</h4>
+            <ul class="footer-links">
+              <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./terms-of-service.html">Terms of Service</a></li>
+              <li><a href="./shipping.html">Shipping Information</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <address>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Drink Lane, Nairobi</p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+254123456789">+254 123 456 789</a></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:info@nobledram.com">info@nobledram.com</a></p>
+            </address>
+          </div>
         </div>
       </div>
     </div>
-    <div class="copy">
-      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; <span id="current-year">2025</span> The Noble Dram. All rights reserved.</p>
+        <div class="payment-methods">
+          <img src="../static/images/payment-methods.png" alt="Payment methods">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <p>Please drink responsibly. Do not share content with anyone under the legal drinking age.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Flash message for notifications -->
+  <div id="alert" class="flash-message"></div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
   <script src="../static/js/script.js"></script>
+  <script>
+    // Update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Testimonial carousel functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+
+      testimonialDots.forEach(dot => {
+        dot.addEventListener('click', function () {
+          const slideIndex = this.getAttribute('data-slide');
+
+          // Hide all slides and remove active class from dots
+          testimonialSlides.forEach(slide => slide.classList.remove('active'));
+          testimonialDots.forEach(dot => dot.classList.remove('active'));
+
+          // Show selected slide and add active class to corresponding dot
+          testimonialSlides[slideIndex].classList.add('active');
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -5,201 +5,872 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - The Noble Dram</title>
-  <link rel="shortcut icon" href="/static/images/noble-dram.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="description"
+    content="Get in touch with The Noble Dram. We're here to answer your questions about our premium spirits collection, events, and services.">
   <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <style>
-    #contact {
-      background-color: #f5f5f5;
+    /* Contact Page Specific Styles */
+
+    /* Contact Section Layout */
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    /* Contact Information Panel */
+    .contact-info {
+      background-color: white;
+      border-radius: var(--border-radius);
       padding: 40px;
-      text-align: center;
+      box-shadow: var(--box-shadow);
     }
 
-    h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      
-    }
-
-    .contact-options {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    .info-header {
       margin-bottom: 40px;
-      gap: 40px;
-      margin-top: 30px;
     }
 
-    .contact-option {
-      width: 400px;
-      padding: 15px 40px;
-      border: 1px none #ddd;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .contact-option i {
-      font-size: 36px;
+    .info-header h2 {
+      margin-top: 10px;
       margin-bottom: 15px;
+      font-size: 2rem;
+      color: var(--primary);
     }
 
-    .contact-option h3 {
-      margin-bottom: 15px;
+    .info-header p {
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    .contact-option a {
-      color: rgb(132, 84, 254);
+    /* Contact Methods */
+    .contact-methods {
+      margin-bottom: 40px;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .method-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(179, 139, 89, 0.1);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .method-details h4 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .method-details p {
+      color: var(--text);
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+
+    .method-details a {
+      color: var(--secondary);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    .contact-option a:hover {
-      text-decoration: underline;
+    .method-details a:hover {
+      color: var(--primary);
     }
 
-    #contact-form {
-      max-width: 420px;
-      margin: 0 auto;
+    .btn-directions {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: var(--light);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-directions:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+
+    /* Contact Social Links */
+    .contact-socials h4 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .contact-socials .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .contact-socials .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--light);
+      color: var(--primary);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-socials .social-links a:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+
+    /* Contact Form */
+    .contact-form-container {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .contact-form-container h3 {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.6rem;
+      color: var(--primary);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
     .form-group {
       margin-bottom: 20px;
     }
 
-    label {
+    .form-group label {
       display: block;
-      margin-bottom: 5px;
-      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--primary);
+      font-size: 0.95rem;
     }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
       width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--border-radius);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    button[type="submit"] {
-      background-color: rgb(132, 84, 254);
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(179, 139, 89, 0.1);
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    /* Checkbox Styling */
+    .checkbox-group {
+      margin-top: 25px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
       cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .custom-checkbox {
+      height: 20px;
+      width: 20px;
+      min-width: 20px;
+      background-color: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-right: 10px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-checkbox::after {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: white;
+      font-size: 0.7rem;
+      display: none;
+    }
+
+    .checkbox-label input:checked~.custom-checkbox {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .checkbox-label input:checked~.custom-checkbox::after {
+      display: block;
+    }
+
+    .checkbox-label a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    .checkbox-label a:hover {
+      text-decoration: underline;
+    }
+
+    /* Terms Checkbox */
+    .terms-checkbox {
+      margin-bottom: 20px;
+    }
+
+    /* Submit Button */
+    .contact-form .btn-primary {
+      margin-top: 10px;
+      width: 100%;
+      font-size: 1rem;
+      padding: 14px;
+    }
+
+    /* Map Section */
+    .map-section {
+      padding: 60px 0;
+      background-color: var(--light);
+    }
+
+    .contact-map {
+      height: 450px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: var(--light);
+      cursor: pointer;
+    }
+
+    .faq-question h4 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .faq-toggle {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      font-size: 1rem;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .faq-toggle:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 20px 0;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .faq-item.active .faq-question {
+      background-color: rgba(179, 139, 89, 0.1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        order: 2;
+      }
+
+      .contact-form-container {
+        order: 1;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        padding: 50px 0;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-method {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .method-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .contact-socials {
+        text-align: center;
+      }
+
+      .contact-socials .social-links {
+        justify-content: center;
+      }
+
+      .contact-map {
+        height: 350px;
+      }
+
+      .faq-question h4 {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      .contact-info,
+      .contact-form-container {
+        padding: 30px 20px;
+      }
+
+      .contact-map {
+        height: 250px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="marquee">
-    <span>Save 10% on your first purchase with code <a href="./products.html">#WELCOME10</a></span>
-  </div>
-  <header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="../index.html">Home</a>
-      <a href="./products.html">Products</a>
-      <a href="./about.html">About Us</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./signup.html">Sign up</a>
-      <a href="./login.html">Login</a>
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Save 10% on your first purchase with code <strong>WELCOME10</strong> | <a href="./products.html">Shop Now</a>
+      </p>
+      <div class="announcement-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="../index.html" class="brand">The Noble Dram</a>
-    <a href="#" class="cart-link">
-      <span class="counter" id="count-el">0</span>
-      <i class="fas fa-shopping-cart"></i>
-    </a>
-  </header>
-  <div class="scroll-progress"></div>
-  <main>
-    <section id="contact">
-      <div class="contact-container">
-        <h2>Get in Touch</h2>
-        <p>We'd love to hear from you. Whether you have a question, feedback, or just want to say hello, please don't
-          hesitate to contact us.</p>
+  </div>
 
-        <div class="contact-options">
-          <div class="contact-option">
-            <i class="fas fa-envelope"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:support@nobledram.com">support@nobledram.com</a></p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <a href="../index.html" class="site-logo">
+        <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram">
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="./products.html" class="nav-link">Collection</a>
+            <ul class="dropdown-menu">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+              <li><a href="./products.html?category=limited">Limited Edition</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="./login.html" class="action-btn" aria-label="Account">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="action-btn cart-toggle" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="count-el">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay">
+      <div class="container">
+        <form class="search-form">
+          <input type="search" placeholder="Search for products..." aria-label="Search">
+          <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Page hero section -->
+  <section class="page-hero" style="background-image: url('../static/images/contact-hero-bg.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>We're here to answer your questions and provide exceptional service</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="contact-page">
+    <!-- Contact section with info and form -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Contact information -->
+          <div class="contact-info">
+            <div class="info-header">
+              <span class="section-subheading">Get in Touch</span>
+              <h2>How Can We Help You?</h2>
+              <p>We value your inquiries and feedback. Our team is ready to assist you with any questions about our
+                products, services, or special requests.</p>
+            </div>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-details">
+                  <h4>Email Us</h4>
+                  <p>For general inquiries: <a href="mailto:info@nobledram.com">info@nobledram.com</a></p>
+                  <p>For customer support: <a href="mailto:support@nobledram.com">support@nobledram.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="method-details">
+                  <h4>Call Us</h4>
+                  <p>Customer Service: <a href="tel:+254123456789">+254 123 456 789</a></p>
+                  <p>Monday to Friday: 9am - 6pm</p>
+                  <p>Saturday: 10am - 4pm</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="method-details">
+                  <h4>Visit Our Store</h4>
+                  <p>123 Drink Lane</p>
+                  <p>Nairobi, Kenya</p>
+                  <a href="https://goo.gl/maps/123" target="_blank" class="btn-directions">Get Directions</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <h4>Connect With Us</h4>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="contact-option">
-            <i class="fas fa-phone"></i>
-            <h3>Phone</h3>
-            <p><a href="tel:+1234567890">+123 456 7890</a></p>
-          </div>
-          <div class="contact-option">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Address</h3>
-            <a href="#">123 Drink Lane, Beverage City, BC 12345</a>
+
+          <!-- Contact form -->
+          <div class="contact-form-container">
+            <h3>Send Us a Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name*</label>
+                  <input type="text" id="first-name" name="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name*</label>
+                  <input type="text" id="last-name" name="lastName" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject*</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="product-inquiry">Product Inquiry</option>
+                  <option value="order-status">Order Status</option>
+                  <option value="returns">Returns & Exchanges</option>
+                  <option value="wholesale">Wholesale Opportunities</option>
+                  <option value="events">Events & Tastings</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter">
+                  <span class="custom-checkbox"></span>
+                  Subscribe to our newsletter for exclusive offers and updates
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label terms-checkbox">
+                  <input type="checkbox" name="terms" required>
+                  <span class="custom-checkbox"></span>
+                  I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
           </div>
         </div>
+      </div>
+    </section>
 
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Map section -->
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header centered">
+          <h2>Find Us</h2>
+          <p>Visit our flagship store in Nairobi</p>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853743783!2d36.684054539363754!3d-1.3032079642587657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1633559801690!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-subheading">Common Questions</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to the most common inquiries about our products and services</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What is your shipping policy?</h4>
+              <button class="faq-toggle" aria-label="Toggle FAQ"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>We offer free shipping on all orders over KSh5,000 within Kenya. Standard shipping typically takes 3-5
+                business days, while express shipping is available for an additional fee with delivery within 1-2
+                business days. International shipping rates and delivery times vary by location.</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you offer gift wrapping services?</h4>
+              <button class="faq-toggle" aria-label="Toggle FAQ"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we offer premium gift wrapping services for all our products. During checkout, you can select the
+                gift wrapping option and include a personalized message. Our elegant packaging ensures your gift makes a
+                lasting impression.</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What is your return policy?</h4>
+              <button class="faq-toggle" aria-label="Toggle FAQ"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>We accept returns within 30 days of purchase for unopened products in their original packaging. Please
+                note that personalized items and special orders are not eligible for returns. Contact our customer
+                service team to initiate a return.</p>
+            </div>
           </div>
-          <button type="submit">Send Message</button>
-        </form>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you host tasting events?</h4>
+              <button class="faq-toggle" aria-label="Toggle FAQ"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we regularly host tasting events and masterclasses at our Nairobi location. These events feature
+                guided tastings of our premium spirits, food pairings, and opportunities to learn from industry experts.
+                Check our Events page or join our newsletter to stay updated on upcoming events.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can I purchase spirits for corporate gifts?</h4>
+              <button class="faq-toggle" aria-label="Toggle FAQ"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! We offer corporate gifting solutions with volume discounts, custom packaging options, and
+                personalized messaging. Our team can help you select the perfect spirits for your corporate gifts.
+                Contact our corporate sales team at corporate@nobledram.com for more information.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html/#services">Services</a></li>
-          <li><a href="./products.html">Products</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
-          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
-          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Newsletter Signup</h3>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
-          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
-          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a href="../index.html" class="footer-logo">
+              <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram">
+            </a>
+            <p>Purveyors of exceptional spirits since 2015. We bring the world's finest beverages to discerning
+              connoisseurs.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./products.html">Shop Collection</a></li>
+              <li><a href="./about.html">Our Story</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="./products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./products.html?category=vodka">Vodka</a></li>
+              <li><a href="./products.html?category=rum">Rum</a></li>
+              <li><a href="./products.html?category=gin">Gin</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Help & Info</h4>
+            <ul class="footer-links">
+              <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./terms-of-service.html">Terms of Service</a></li>
+              <li><a href="./shipping.html">Shipping Information</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <address>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Drink Lane, Nairobi</p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+254123456789">+254 123 456 789</a></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:info@nobledram.com">info@nobledram.com</a></p>
+            </address>
+          </div>
         </div>
       </div>
     </div>
-    <div class="copy">
-      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; <span id="current-year">2025</span> The Noble Dram. All rights reserved.</p>
+        <div class="payment-methods">
+          <img src="../static/images/payment-methods.png" alt="Payment methods">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <p>Please drink responsibly. Do not share content with anyone under the legal drinking age.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Flash message for notifications -->
+  <div id="alert" class="flash-message"></div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
   <script src="../static/js/script.js"></script>
+  <script>
+    // Update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // FAQ accordion functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+
+      faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const faqItem = this.closest('.faq-item');
+          const faqAnswer = faqItem.querySelector('.faq-answer');
+          const icon = this.querySelector('i');
+
+          // Toggle this FAQ item
+          faqItem.classList.toggle('active');
+
+          if (faqItem.classList.contains('active')) {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+            icon.classList.replace('fa-plus', 'fa-minus');
+          } else {
+            faqAnswer.style.maxHeight = '0px';
+            icon.classList.replace('fa-minus', 'fa-plus');
+          }
+        });
+      });
+    });
+
+    // Form submission handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Simulate form submission
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        setTimeout(() => {
+          NobleDram.showFlashMessage('Thank you for your message! We\'ll get back to you shortly.');
+          this.reset();
+          submitButton.disabled = false;
+          submitButton.innerHTML = 'Send Message';
+        }, 1500);
+      });
+    }
+  </script>
 </body>
 
 </html>

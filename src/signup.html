@@ -4,101 +4,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up - The Noble Dram</title>
+  <title>Create Account - The Noble Dram</title>
+  <meta name="description"
+    content="Join The Noble Dram community to discover exceptional spirits, exclusive events and personalized recommendations.">
   <link rel="shortcut icon" href="../static/images/noble-dram.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="../static/css/signup.css">
-  <style>
-    #signup {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-    }
-
-    .logo {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    button[type="submit"] {
-      background-color: rgb(132, 84, 254);
-      color: #fff;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .social-signup {
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    .login-link {
-      margin-top: 20px;
-    }
-
-    .login-link a {
-      color: rgb(132, 84, 254);
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-  <main>
-    <section id="signup">
-      <div class="signup-container">
-        <img src="../static/images/noble-dram.jpeg" alt="The Noble Dram Logo" class="logo">
-        <h2>Join the Club</h2>
-        <p>Sign up for a world of premium spirits and exclusive offers.</p>
+<body class="auth-page">
+  <!-- Age verification overlay -->
+  <div class="age-verification" id="age-verification">
+    <div class="age-verification-content">
+      <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram" class="age-logo">
+      <h2>Welcome to The Noble Dram</h2>
+      <p>Please verify that you are of legal drinking age to enter this site.</p>
 
-        <form id="signup-form">
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="password" id="password" name="password" placeholder="Password" required>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+      <div class="age-verification-form">
+        <div class="age-buttons">
+          <button class="btn btn-outline" id="age-no">I am not of legal age</button>
+          <button class="btn btn-primary" id="age-yes">I am of legal drinking age</button>
+        </div>
+        <p class="age-notice">By entering this site you accept our <a href="#">Terms and Conditions</a> and <a
+            href="#">Privacy Policy</a>.</p>
       </div>
-    </section>
-  </main>
-  <script src="../static/js/signup.js"></script>
+    </div>
+  </div>
+
+  <div class="auth-container">
+    <!-- Left panel with brand info -->
+    <div class="auth-brand-panel">
+      <div class="brand-panel-content">
+        <div class="panel-logo">
+          <img src="../static/images/noble-dram-logo.png" alt="The Noble Dram">
+        </div>
+
+        <div class="panel-message">
+          <h2>"Every bottle tells a story. Join our community and be part of ours."</h2>
+          <p>— The Noble Dram Experience</p>
+        </div>
+
+        <div class="panel-features">
+          <div class="feature">
+            <i class="fas fa-user-circle"></i>
+            <p>Create your personalized taste profile</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-gifts"></i>
+            <p>Early access to new and rare releases</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-glass-cheers"></i>
+            <p>Join exclusive tasting events and masterclasses</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <p>© 2025 The Noble Dram. All Rights Reserved.</p>
+        <p>Please enjoy our products responsibly.</p>
+      </div>
+    </div>
+
+    <!-- Right panel with authentication form -->
+    <div class="auth-form-panel">
+      <div class="form-panel-header">
+        <a href="../index.html" class="back-to-site">
+          <i class="fas fa-chevron-left"></i> Back to Homepage
+        </a>
+        <p class="account-switch">
+          Already have an account? <a href="./login.html">Sign In</a>
+        </p>
+      </div>
+
+      <div class="form-panel-content">
+        <div class="auth-header">
+          <h1>Create Your Account</h1>
+          <p>Join The Noble Dram community and start your journey into the world of exceptional spirits.</p>
+        </div>
+
+        <div class="social-auth">
+          <button class="social-btn google">
+            <i class="fab fa-google"></i> Continue with Google
+          </button>
+          <button class="social-btn facebook">
+            <i class="fab fa-facebook-f"></i> Continue with Facebook
+          </button>
+        </div>
+
+        <div class="divider">
+          <span>or sign up with email</span>
+        </div>
+
+        <form id="signup-form" class="auth-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" id="first-name" name="firstName" placeholder="Your first name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" id="last-name" name="lastName" placeholder="Your last name" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-with-icon password-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" name="password" placeholder="Create a password" required>
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+            <div class="password-strength">
+              <div class="strength-meter">
+                <span class="meter-section"></span>
+                <span class="meter-section"></span>
+                <span class="meter-section"></span>
+                <span class="meter-section"></span>
+              </div>
+              <p class="strength-text">Password strength: <span id="strength-value">Weak</span></p>
+            </div>
+          </div>
+
+          <div class="form-group birthdate">
+            <label for="birthdate">Date of Birth</label>
+            <div class="input-with-icon">
+              <i class="fas fa-calendar-alt"></i>
+              <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <small class="form-hint">You must be of legal drinking age to create an account.</small>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="newsletter" checked>
+              <span class="custom-checkbox"></span>
+              I want to receive updates about new releases, events, and special offers
+            </label>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label terms-checkbox">
+              <input type="checkbox" name="terms" required>
+              <span class="custom-checkbox"></span>
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-auth">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/js/script.js"></script>
 </body>
 
 </html>

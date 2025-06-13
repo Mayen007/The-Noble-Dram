@@ -4,149 +4,514 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Noble Dram</title>
+  <title>The Noble Dram | Premium Spirits Collection</title>
+  <meta name="description"
+    content="Discover our curated collection of premium spirits, including rare whiskeys, vodkas, and more.">
   <link rel="shortcut icon" href="./static/images/noble-dram.jpeg" type="image/x-icon">
-  <link rel="stylesheet" href="./static/css/styles.css">
+  <link rel="stylesheet" href="./static/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="marquee">
-    <span>Save 10% on your first purchase with code <a href="./products.html">#WELCOME10</a></span>
+  <!-- Age verification overlay -->
+  <div id="age-verification" class="age-overlay">
+    <div class="age-container">
+      <img src="./static/images/noble-dram-logo.png" alt="The Noble Dram" class="age-logo">
+      <h2>Age Verification</h2>
+      <p>You must be of legal drinking age to enter this website.</p>
+      <div class="age-buttons">
+        <button id="age-yes" class="btn btn-primary">I am of legal age</button>
+        <button id="age-no" class="btn btn-outline">I am not of legal age</button>
+      </div>
+    </div>
   </div>
-  <header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="./index.html">Home</a>
-      <a href="./src/products.html">Products</a>
-      <a href="./src/about.html">About Us</a>
-      <a href="./src/contact.html">Contact Us</a>
-      <a href="./src/signup.html">Sign up</a>
-      <a href="./src/login.html">Login</a>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Free shipping on orders over KSh5,000 | <a href="./src/products.html">Shop Now</a></p>
+      <div class="announcement-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <span onclick="openNav()" class="menu">&#9776;</span>
-    <a href="./index.html" class="brand">The Noble Dram</a>
-    <a href="#" class="cart-link">
-      <span class="counter" id="count-el">0</span>
-      <i class="fas fa-shopping-cart"></i>
-    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <a href="./index.html" class="site-logo">
+        <img src="./static/images/noble-dram-logo.png" alt="The Noble Dram">
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="./src/products.html" class="nav-link">Collection</a>
+            <ul class="dropdown-menu">
+              <li><a href="./src/products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./src/products.html?category=vodka">Vodka</a></li>
+              <li><a href="./src/products.html?category=rum">Rum</a></li>
+              <li><a href="./src/products.html?category=gin">Gin</a></li>
+              <li><a href="./src/products.html?category=limited">Limited Edition</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="./src/about.html" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="./src/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="./src/login.html" class="action-btn" aria-label="Account">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="action-btn cart-toggle" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="count-el">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay">
+      <div class="container">
+        <form class="search-form">
+          <input type="search" placeholder="Search for products..." aria-label="Search">
+          <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="search-close" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
   </header>
-  <div class="scroll-progress"></div>
-  <main class="main-index">
-    <section class="hero-section">
-      <h1 class="animate-pop-in">Indulge in Timeless Elegance</h1>
-      <p class="animate-pop-in">Experience Exquisite Spirits and Fine Liquors, Curated for the Connoisseur</p>
-      <div class="btnDiv">
-        <a href="#shop">Explore Our Collection</a>
-      </div>
-    </section>
 
-  </main>
+  <!-- Cart sidebar -->
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items will be added dynamically -->
+      <div class="empty-cart">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <a href="./src/products.html" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total">KSh0.00</span>
+      </div>
+      <a href="./src/checkout.html" class="btn btn-checkout">Checkout</a>
+    </div>
+  </div>
 
-  <section id="services">
-    <h1 class="our-services">Our Services</h1>
-    <div class="services">
-      <div class="service-item">
-        <div class="item">
-          <i class="fas fa-wine-bottle"></i>
-          <strong>Product Catalog and Detailed Descriptions</strong>
+  <!-- Hero section with slider -->
+  <section class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('./static/images/noble-dram-bg.jpg');">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="animate-fade-in">Exceptional Whiskeys,<br>Extraordinary Moments</h1>
+          <p class="animate-fade-in">Discover our curated collection of premium spirits from around the world</p>
+          <div class="hero-buttons animate-fade-in">
+            <a href="./src/products.html" class="btn btn-primary">Explore Collection</a>
+            <a href="./src/about.html" class="btn btn-outline">Our Story</a>
+          </div>
         </div>
-        <ul>
-          <li><i class="fas fa-list"></i> Wide Selection: Browse our extensive collection of wines, beers, spirits,
-            and non-alcoholic beverages.</li>
-          <li><i class="fas fa-info-circle"></i> Detailed Descriptions: Get in-depth information on each product,
-            including tasting notes, origin, alcohol content, and serving suggestions.</li>
-          <li><i class="fas fa-tags"></i> Competitive Pricing: Enjoy our products at competitive prices.</li>
-        </ul>
       </div>
-      <div class="service-item">
-        <div class="item">
-          <i class="fas fa-heart"></i>
-          <strong>Personalized Recommendations</strong>
+    </div>
+    <div class="hero-slide" style="background-image: url('./static/images/noble-dram-bg1.jpg');">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Crafted with Precision,<br>Enjoyed with Passion</h1>
+          <p>Premium vodkas for the discerning connoisseur</p>
+          <div class="hero-buttons">
+            <a href="./src/products.html?category=vodka" class="btn btn-primary">Shop Vodkas</a>
+            <a href="#featured-products" class="btn btn-outline">Featured Products</a>
+          </div>
         </div>
-        <ul>
-          <li><i class="fas fa-thumbs-up"></i> Recommendation Engine: Discover products tailored to your tastes based
-            on your browsing and purchase history.</li>
-          <li><i class="fas fa-cogs"></i> Personalized Collections: Explore curated collections for different
-            occasions, tastes, and budgets.</li>
-          <li><i class="fas fa-chart-line"></i> Trending Products: Stay updated with what's trending in the market.
-          </li>
-        </ul>
       </div>
-      <div class="service-item">
-        <div class="item">
-          <i class="fas fa-truck"></i>
-          <strong>Delivery Services</strong>
-        </div>
-        <ul>
-          <li><i class="fas fa-shipping-fast"></i> Fast Shipping: Choose from quick and reliable shipping options.
-          </li>
-          <li><i class="fas fa-box"></i> Free Delivery: Enjoy free delivery on orders over a certain amount.</li>
-          <li><i class="fas fa-gift"></i> Gift Wrapping: Add gift wrapping and personalized messages for special
-            gifts.</li>
-        </ul>
+    </div>
+    <div class="hero-slider-controls">
+      <button class="slider-arrow prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Go to slide 1"></button>
+        <button class="slider-dot" aria-label="Go to slide 2"></button>
+      </div>
+      <button class="slider-arrow next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Category highlights -->
+  <section class="category-highlights">
+    <div class="container">
+      <div class="categories-grid">
+        <a href="./src/products.html?category=whiskey" class="category-card whiskey">
+          <div class="category-overlay"></div>
+          <h3>Whiskey</h3>
+        </a>
+        <a href="./src/products.html?category=vodka" class="category-card vodka">
+          <div class="category-overlay"></div>
+          <h3>Vodka</h3>
+        </a>
+        <a href="./src/products.html?category=rum" class="category-card rum">
+          <div class="category-overlay"></div>
+          <h3>Rum</h3>
+        </a>
+        <a href="./src/products.html?category=gin" class="category-card gin">
+          <div class="category-overlay"></div>
+          <h3>Gin</h3>
+        </a>
       </div>
     </div>
   </section>
-  <section id="shop">
-    <h2>Shop Our Collection</h2>
-    <div class="product-grid" id="product-id"></div>
-    <a href="./src/products.html" class="view-more-link">View More Products</a>
-  </section>
-  <section id="promotions">
-    <div class="promotion same-day-delivery">
-      <h3>Same Day Delivery</h3>
-      <p>Enjoy your favorite drinks tonight! Order by 2 PM for same-day delivery.</p>
-      <a href="./src/products.html">Order Now</a>
-    </div>
-    <div class="promotion wine-club">
-      <h3>Join Our Wine Club</h3>
-      <p>Get exclusive access to rare finds, curated selections, and special discounts.</p>
-      <a href="#learn_more">Learn More</a>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="./src/products.html">Products</a></li>
-          <li><a href="./src/about.html">About Us</a></li>
-          <li><a href="./src/contact.html">Contact Us</a></li>
-        </ul>
+
+  <!-- Featured products -->
+  <section class="featured-products" id="featured-products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Collection</h2>
+        <p>Handpicked premium spirits for the discerning palate</p>
       </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Email: <a href="mailto:support@sipsavvy.com">support@nobledram.com</a></li>
-          <li>Phone: <a href="tel:+123456789">+123 456 789</a></li>
-          <li>Address: 123 Drink Lane, Beverage City, BC 12345</li>
-        </ul>
+
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="whiskey">Whiskey</button>
+        <button class="filter-btn" data-filter="vodka">Vodka</button>
+        <button class="filter-btn" data-filter="rum">Rum</button>
       </div>
-      <div class="footer-section">
-        <h3>Newsletter Signup</h3>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
-          <input type="submit" value="Subscribe">
+
+      <div class="products-grid" id="product-id">
+        <!-- Products will be loaded dynamically via JavaScript -->
+      </div>
+
+      <div class="section-footer">
+        <a href="./src/products.html" class="btn btn-secondary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story section -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-content">
+        <h2>The Art of Fine Spirits</h2>
+        <p>At The Noble Dram, we believe that every bottle tells a story. Our passion for exceptional spirits drives us
+          to source the finest selections from around the world, each with its unique heritage and character.</p>
+        <p>From the smoky peat of Scottish highlands to the smooth complexity of aged rums, we invite you to explore our
+          carefully curated collection.</p>
+        <a href="./src/about.html" class="btn btn-outline">Discover Our Story</a>
+      </div>
+      <div class="story-image">
+        <img src="./static/images/barrel-aging.jpg" alt="Barrel aging process">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Noble Dram Experience</h2>
+        <p>Exceptional service for exceptional spirits</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-wine-bottle"></i>
+          </div>
+          <h3>Curated Selection</h3>
+          <p>Handpicked premium spirits from renowned distilleries and hidden gems around the world.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Secure Delivery</h3>
+          <p>Carefully packaged and securely delivered to your doorstep with tracking information.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>Quality Guarantee</h3>
+          <p>We stand behind the authenticity and quality of every product in our collection.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3>Gift Services</h3>
+          <p>Premium gift packaging and personalized messages for special occasions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section" style="background-image: url('./static/images/dark-wood-bg.jpg');">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Join Our Community</h2>
+        <p>Subscribe to receive updates on new arrivals, special promotions, and expert tasting notes.</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <div class="form-consent">
+            <label>
+              <input type="checkbox" required>
+              <span>I agree to receive email communications from The Noble Dram.</span>
+            </label>
+          </div>
         </form>
       </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://facebook.com" rel="noopener" title="facebook" target="_blank" class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com" rel="noopener" title="twitter" target="_blank" class="fab fa-twitter"></a>
-          <a href="https://instagram.com" rel="noopener" title="instagram" target="_blank" class="fab fa-instagram"></a>
-          <a href="https://linkedin.com" rel="noopener" title="linkedin" target="_blank" class="fab fa-linkedin-in"></a>
+    </div>
+  </section>
+
+  <!-- Instagram feed -->
+  <section class="instagram-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Follow Our Journey</h2>
+        <p>@thenobledram</p>
+      </div>
+
+      <div class="instagram-grid">
+        <a href="#" class="instagram-item">
+          <img src="./static/images/instagram/insta-1.jpg" alt="Instagram post">
+          <div class="instagram-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="#" class="instagram-item">
+          <img src="./static/images/instagram/insta-2.jpg" alt="Instagram post">
+          <div class="instagram-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="#" class="instagram-item">
+          <img src="./static/images/instagram/insta-3.jpg" alt="Instagram post">
+          <div class="instagram-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="#" class="instagram-item">
+          <img src="./static/images/instagram/insta-4.jpg" alt="Instagram post">
+          <div class="instagram-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a href="./index.html" class="footer-logo">
+              <img src="./static/images/noble-dram-logo.png" alt="The Noble Dram">
+            </a>
+            <p>Purveyors of exceptional spirits since 2015. We bring the world's finest beverages to discerning
+              connoisseurs.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./src/products.html">Shop Collection</a></li>
+              <li><a href="./src/about.html">Our Story</a></li>
+              <li><a href="./src/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="./src/products.html?category=whiskey">Whiskey</a></li>
+              <li><a href="./src/products.html?category=vodka">Vodka</a></li>
+              <li><a href="./src/products.html?category=rum">Rum</a></li>
+              <li><a href="./src/products.html?category=gin">Gin</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Help & Info</h4>
+            <ul class="footer-links">
+              <li><a href="./src/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="./src/terms-of-service.html">Terms of Service</a></li>
+              <li><a href="./src/shipping.html">Shipping Information</a></li>
+              <li><a href="./src/faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <address>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Drink Lane, Nairobi</p>
+              <p><i class="fas fa-phone"></i> <a href="tel:+254123456789">+254 123 456 789</a></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:info@nobledram.com">info@nobledram.com</a></p>
+            </address>
+          </div>
         </div>
       </div>
     </div>
-    <div class="copy">
-      <p>All Rights Reserved &copy; 2024. The Noble Dram.</p>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; <span id="current-year">2025</span> The Noble Dram. All rights reserved.</p>
+        <div class="payment-methods">
+          <img src="./static/images/payment-methods.png" alt="Payment methods">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <p>Please drink responsibly. Do not share content with anyone under the legal drinking age.</p>
+      </div>
     </div>
   </footer>
-  <p id="alert" class="flash-message"></p>
+
+  <!-- Flash message for notifications -->
+  <div id="alert" class="flash-message"></div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script>
+    // Sample product data
+    const products = [
+      {
+        id: "whiskey1",
+        name: "Highland Reserve 12 Year",
+        priceCents: 599500,
+        image: "./static/images/4th-street.webp",
+        keywords: ["whiskey", "scotch", "highland"],
+        badge: "Best Seller",
+        rating: {
+          stars: 5,
+          count: 127
+        }
+      },
+      {
+        id: "whiskey2",
+        name: "Islay Mist Single Malt",
+        priceCents: 799500,
+        image: "./static/images/254-sand-trap.jpg",
+        keywords: ["whiskey", "scotch", "islay"],
+        badge: "Limited",
+        rating: {
+          stars: 4,
+          count: 89
+        }
+      },
+      {
+        id: "vodka1",
+        name: "Crystal Lake Premium Vodka",
+        priceCents: 399500,
+        image: "./static/images/asian-rum.webp",
+        keywords: ["vodka"],
+        badge: null,
+        rating: {
+          stars: 4,
+          count: 156
+        }
+      },
+      {
+        id: "rum1",
+        name: "Caribbean Gold Aged Rum",
+        priceCents: 459500,
+        image: "./static/images/Black-_-White.png",
+        keywords: ["rum"],
+        badge: "New",
+        rating: {
+          stars: 4,
+          count: 74
+        }
+      },
+      {
+        id: "whiskey3",
+        name: "American Bourbon Reserve",
+        priceCents: 549500,
+        image: "./static/images/hennessy-vs-cognac.png",
+        keywords: ["whiskey", "bourbon"],
+        badge: null,
+        rating: {
+          stars: 5,
+          count: 92
+        }
+      },
+      {
+        id: "gin1",
+        name: "Botanical Dry Gin",
+        priceCents: 379500,
+        image: "./static/images/jagermeister.png",
+        keywords: ["gin"],
+        badge: null,
+        rating: {
+          stars: 4,
+          count: 68
+        }
+      },
+      {
+        id: "vodka2",
+        name: "Nordic Frost Vodka",
+        priceCents: 429500,
+        image: "./static/images/jameson.jpg",
+        keywords: ["vodka"],
+        badge: "Popular",
+        rating: {
+          stars: 5,
+          count: 103
+        }
+      },
+      {
+        id: "rum2",
+        name: "Spiced Dark Rum",
+        priceCents: 489500,
+        image: "./static/images/johnnie-walker-blue-lable.webp",
+        keywords: ["rum"],
+        badge: null,
+        rating: {
+          stars: 4,
+          count: 85
+        }
+      }
+    ];
+  </script>
+
   <script src="./static/js/script.js"></script>
 </body>
 
